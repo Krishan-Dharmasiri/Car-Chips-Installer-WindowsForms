@@ -127,9 +127,9 @@
             this.lblCopiesRequired.AutoSize = true;
             this.lblCopiesRequired.Location = new System.Drawing.Point(20, 45);
             this.lblCopiesRequired.Name = "lblCopiesRequired";
-            this.lblCopiesRequired.Size = new System.Drawing.Size(129, 13);
+            this.lblCopiesRequired.Size = new System.Drawing.Size(123, 13);
             this.lblCopiesRequired.TabIndex = 7;
-            this.lblCopiesRequired.Text = "Minimum Copies Required";
+            this.lblCopiesRequired.Text = "Minimum Chips Required";
             // 
             // groupBox1
             // 
