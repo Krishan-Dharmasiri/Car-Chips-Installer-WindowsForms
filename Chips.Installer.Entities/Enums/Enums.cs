@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Chips.Installer.Engine
+namespace Chips.Installer.Entities.Enums
 {
-    public class Class1
+    public enum DataSource
     {
+        CSV = 1,
+        EXCEL,
+        SQL
     }
 }

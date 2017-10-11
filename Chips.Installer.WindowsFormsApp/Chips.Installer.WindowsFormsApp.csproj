@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SimpleInjector">
+      <HintPath>..\..\FlexeraCodeTestWin\FlexeraCodeTestWin\bin\Debug\SimpleInjector.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -83,6 +86,12 @@
     <Content Include="Icons\Tick.ico" />
     <Content Include="Icons\Warning.ico" />
     <Content Include="Icons\Wrong.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Chips.Installer.Engine\Chips.Installer.Engine.csproj">
+      <Project>{ae5e9d72-a858-4403-88a1-29d4067ec9e1}</Project>
+      <Name>Chips.Installer.Engine</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Installer.Engine", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Installer.Data", "Chips.Installer.Data\Chips.Installer.Data.csproj", "{68D4097C-F599-467D-82F2-4717B880A584}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Installer.Entities", "Chips.Installer.Entities\Chips.Installer.Entities.csproj", "{A6CC4F65-CEB6-4EAD-BC97-D9F28FB86833}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{68D4097C-F599-467D-82F2-4717B880A584}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68D4097C-F599-467D-82F2-4717B880A584}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68D4097C-F599-467D-82F2-4717B880A584}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6CC4F65-CEB6-4EAD-BC97-D9F28FB86833}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6CC4F65-CEB6-4EAD-BC97-D9F28FB86833}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6CC4F65-CEB6-4EAD-BC97-D9F28FB86833}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6CC4F65-CEB6-4EAD-BC97-D9F28FB86833}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -43,6 +43,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblDataSource = new System.Windows.Forms.Label();
+            this.cmbDataSource = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -59,7 +61,7 @@
             // 
             // btnCalculate
             // 
-            this.btnCalculate.Location = new System.Drawing.Point(16, 102);
+            this.btnCalculate.Location = new System.Drawing.Point(19, 162);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(131, 23);
             this.btnCalculate.TabIndex = 14;
@@ -88,11 +90,11 @@
             // lblAppId
             // 
             this.lblAppId.AutoSize = true;
-            this.lblAppId.Location = new System.Drawing.Point(13, 66);
+            this.lblAppId.Location = new System.Drawing.Point(16, 66);
             this.lblAppId.Name = "lblAppId";
-            this.lblAppId.Size = new System.Drawing.Size(71, 13);
+            this.lblAppId.Size = new System.Drawing.Size(40, 13);
             this.lblAppId.TabIndex = 12;
-            this.lblAppId.Text = "Application Id";
+            this.lblAppId.Text = "Chip Id";
             // 
             // lblFilePath
             // 
@@ -105,9 +107,9 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(167, 102);
+            this.btnExit.Location = new System.Drawing.Point(205, 162);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.Size = new System.Drawing.Size(121, 23);
             this.btnExit.TabIndex = 16;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -135,7 +137,7 @@
             // 
             this.groupBox1.Controls.Add(this.txtCopiesRequired);
             this.groupBox1.Controls.Add(this.lblCopiesRequired);
-            this.groupBox1.Location = new System.Drawing.Point(26, 216);
+            this.groupBox1.Location = new System.Drawing.Point(26, 271);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(372, 84);
             this.groupBox1.TabIndex = 17;
@@ -144,6 +146,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cmbDataSource);
+            this.groupBox2.Controls.Add(this.lblDataSource);
             this.groupBox2.Controls.Add(this.lblFilePath);
             this.groupBox2.Controls.Add(this.btnExit);
             this.groupBox2.Controls.Add(this.btnCalculate);
@@ -152,7 +156,7 @@
             this.groupBox2.Controls.Add(this.txtFilePath);
             this.groupBox2.Location = new System.Drawing.Point(26, 26);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1000, 166);
+            this.groupBox2.Size = new System.Drawing.Size(1000, 208);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Input";
@@ -167,11 +171,28 @@
             this.errorProvider2.ContainerControl = this;
             this.errorProvider2.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider2.Icon")));
             // 
+            // lblDataSource
+            // 
+            this.lblDataSource.AutoSize = true;
+            this.lblDataSource.Location = new System.Drawing.Point(16, 113);
+            this.lblDataSource.Name = "lblDataSource";
+            this.lblDataSource.Size = new System.Drawing.Size(67, 13);
+            this.lblDataSource.TabIndex = 17;
+            this.lblDataSource.Text = "Data Source";
+            // 
+            // cmbDataSource
+            // 
+            this.cmbDataSource.FormattingEnabled = true;
+            this.cmbDataSource.Location = new System.Drawing.Point(205, 105);
+            this.cmbDataSource.Name = "cmbDataSource";
+            this.cmbDataSource.Size = new System.Drawing.Size(121, 21);
+            this.cmbDataSource.TabIndex = 18;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1054, 335);
+            this.ClientSize = new System.Drawing.Size(1054, 390);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.groupBox1);
@@ -204,6 +225,8 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ComboBox cmbDataSource;
+        private System.Windows.Forms.Label lblDataSource;
     }
 }
 

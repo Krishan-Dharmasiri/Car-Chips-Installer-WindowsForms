@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Chips.Installer.Engine.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,11 +14,12 @@ namespace Chips.Installer.WindowsFormsApp
 {
     public partial class MainForm : Form
     {
-        //private readonly IDataProcessor _dataProcessor;
-        public MainForm() //(IDataProcessor dataProcessor)
+        private IChipManager _chipManager;
+        public MainForm(IChipManager chipManager)
         {
-            //_dataProcessor = dataProcessor;
+            _chipManager = chipManager;
             InitializeComponent();
+            PopulateDataSourceComboBox();
         }
 
         private void btnCalculate_Click(object sender, EventArgs e)
@@ -25,18 +27,19 @@ namespace Chips.Installer.WindowsFormsApp
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
                 string filePath = txtFilePath.Text;
-                int appId = Convert.ToInt32(txtAppliationId.Text);
-                //DataHandlerSource dataSource = DataHandlerSource.ExcelHandler; //Default Value
+                int chipId = Convert.ToInt32(txtAppliationId.Text);
+                string dataSource = "CSV";
 
-                //var minCopies = _dataProcessor.GetMinimumCopiesForApplication(filePath, appId, dataSource);
+                //Pass parameters as a generic collection so that any number of parameters can be passed 
+                Dictionary<string, string> parameters = new Dictionary<string, string>();
+                parameters.Add("FilePath", filePath);
+                parameters.Add("ChipId", chipId.ToString());
+                parameters.Add("DataSource", dataSource);
 
-                //txtCopiesRequired.Text = minCopies.ToString();
+                var chipsCount = _chipManager.GetMinimumChipsRequired(parameters);
 
-                txtCopiesRequired.Text = "Not Yet Implemented";
+                txtCopiesRequired.Text = chipsCount.ToString();                
             }
-
-
-
         }
 
         private void txtFilePath_Validating(object sender, CancelEventArgs e)
@@ -102,6 +105,13 @@ namespace Chips.Installer.WindowsFormsApp
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void PopulateDataSourceComboBox()
+        {
+            cmbDataSource.Items.Add("CSV");
+            cmbDataSource.Items.Add("EXCEL");
+            cmbDataSource.SelectedIndex = cmbDataSource.FindStringExact("CSV");
         }
         
     }
